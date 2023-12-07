@@ -43,13 +43,10 @@ public class OrnamentSpawner : MonoBehaviour
             mainCamera.transform.forward * 2;
 
 
-        // Calculate the center of the viewport
         Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, 0);
 
-        // Create a ray from the camera through the center of the screen
         Ray ray = mainCamera.ScreenPointToRay(screenCenter);
 
-        // Perform the raycast
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit)) {
 
